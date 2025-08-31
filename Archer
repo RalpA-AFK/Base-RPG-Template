@@ -4,10 +4,8 @@ public class Archer extends Character {
 		super(name, 100, weapon);
 	}
 
-	
-	
 	public void attack() {
-		System.out.println(name + " Shoot their bow: (" + weapon.getName() + ") dealing " + weapon.getDmg() + " damage.\n" );
+		System.out.println(name + " Shoots their bow: (" + weapon.getName() + ") dealing " + weapon.getDmg() + " damage.\n" );
 	}
 	
 	public void defend() {
