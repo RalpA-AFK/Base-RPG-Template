@@ -1,4 +1,10 @@
 ToDo
-status effect system written within the behavior file or creating a seperate damage type
 
-Use behavior file to set how characters move interact and such
+Status effects {flame,bleed,freezing,overheating,frosted,slowed,weakened,holyDown}
+Buff effects {holyLight,holyBlessing,rally,bulk up}
+
+Level progression system unique to character type (archer has a set stat increase on level up so on so forth)
+
+Enemy type declaration
+
+jframe window development

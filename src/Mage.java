@@ -1,4 +1,3 @@
-package src;
 public class Mage extends Character {
 	
 	public Mage(String name, Weapon weapon) {

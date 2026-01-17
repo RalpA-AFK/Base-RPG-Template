@@ -1,4 +1,3 @@
-package src;
 public abstract class Character {
 	protected String name;
 	protected int health; 
@@ -9,6 +8,12 @@ public abstract class Character {
 		this.health = health; 
 		this.weapon = weapon;
 	}
+    public void setHealth(int health){
+        this.health = health;
+    }
+    public int getHealth(){
+        return health;
+    }
 	
 	public abstract void attack();
 	public abstract void defend();

@@ -1,5 +1,5 @@
-package src;
-
+import javax.swing.SwingUtilities;
+import javax.swing.JFrame;
 public class Main {
 
 	public static void main(String[] args) {
@@ -22,6 +22,12 @@ public class Main {
 			c.defend();
 			System.out.println();
 		}
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JFrameDemo frame1 = new JFrameDemo();
+            }
+        });
 
 	}
 }

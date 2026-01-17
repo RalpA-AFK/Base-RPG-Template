@@ -1,4 +1,3 @@
-package src;
 public class Priest extends Character {
 	
 	public Priest(String name, Weapon weapon) {

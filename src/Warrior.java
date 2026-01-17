@@ -1,10 +1,9 @@
-package src;
 public class Warrior extends Character {
 	private Weapon Weapon2;
-	public Warrior(String name, Weapon weapon, Weapon weapon2) {
+	public Warrior(String name, Weapon weapon, Weapon Weapon2) {
 
         super(name, 150, weapon);
-        this.weapon = weapon2;
+        this.Weapon2 = Weapon2;
 	}
 
 	public void attack() {
