@@ -1,11 +1,12 @@
+package src;
 public class Warrior extends Character {
-	
-	public Warrior(String name, Weapon weapon) {
-		super(name, 150, weapon);
+	private Weapon Weapon2;
+	public Warrior(String name, Weapon weapon, Weapon weapon2) {
+
+        super(name, 150, weapon);
+        this.weapon = weapon2;
 	}
 
-	
-	
 	public void attack() {
 		System.out.println(name + " slashes at the enemy with (" + weapon.getName() + "), dealing " + weapon.getDmg() + " damage and applying bleed to the opponent.\n" );
 	}

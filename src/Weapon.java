@@ -1,5 +1,6 @@
+package src;
 import java.util.Random;
-import java.util.BigDecimal;
+import java.math.BigDecimal;
 
 public class Weapon {
 	private String name; 
@@ -21,13 +22,13 @@ public class Weapon {
 
     public boolean getCritBoolean(){return critBoolean;}
 
-    public boolean setCritBoolean(boolean critBoolean){this.critBoolean = critBoolean;}
+    public void setCritBoolean(boolean critBoolean){this.critBoolean = critBoolean;}
 
-    public String setName(int name){this.name = name;}
+    public void setName(String name){this.name = name;}
 
-    public int setDmg(int dmg){this.dmg = dmg;}
+    public void setDmg(int dmg){this.dmg = dmg;}
 
-    public int setCritChance(int critChance){this.critChance = critChance;}
+    public void setCritChance(int critChance){this.critChance = critChance;}
 
     public int dmgCalc(){
 
@@ -35,15 +36,14 @@ public class Weapon {
         int critChance1 = getCritChance();
         int dmg1 = getDmg();
         int modifier = dice.nextInt(100);
-        if(modifier <= critChance1){
+        if(modifier < critChance1){
             critBoolean = true;
-            setCritBoolean(critBoolean);
-            BigDecimal dmg1 = BigDecimal.valueOf(dmg1);
-            dmg1 = dmg1.divide(100);
-            critRange = dice.nextInt(15)
+            BigDecimal dmg2 = BigDecimal.valueOf(dmg1);
+            BigDecimal finalDmg = dmg2.multiply(BigDecimal.valueOf(1.0 + dice.nextDouble()));
+            return finalDmg.intValue();
         } else {
             critBoolean = false;
-            setCritBoolean(critBoolean);
+            return dmg1;
         }
     }
 }

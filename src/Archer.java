@@ -1,7 +1,11 @@
+package src;
+
 public class Archer extends Character {
-	
-	public Archer(String name, Weapon weapon) {
-		super(name, 100, weapon);
+	private Weapon weapon2;
+	public Archer(String name, Weapon weapon, Weapon weapon2) {
+
+        super(name, 100, weapon);
+        this.weapon = weapon2;
 	}
 
 	public void attack() {
