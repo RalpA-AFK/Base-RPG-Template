@@ -1,0 +1,10 @@
+ToDo
+
+Status effects {flame,bleed,freezing,overheating,frosted,slowed,weakened,holyDown}
+Buff effects {holyLight,holyBlessing,rally,bulk up}
+
+Level progression system unique to character type (archer has a set stat increase on level up so on so forth)
+
+Enemy type declaration
+
+jframe window development
