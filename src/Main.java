@@ -16,7 +16,6 @@ public class Main {
         Character priest = new Priest("Constantine", rosary);
 
         Character[] characters = {warrior, mage, archer, priest};
-
         for(Character c : characters ) {
             c.attack();
             c.defend();

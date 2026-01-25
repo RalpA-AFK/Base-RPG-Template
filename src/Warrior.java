@@ -7,7 +7,7 @@ public class Warrior extends Character {
     }
 
     public void attack() {
-        System.out.println(name + " slashes at the enemy with (" + weapon.getName() + "), dealing " + weapon.getDmg() + " damage and applying bleed to the opponent.\n" );
+        System.out.println(name + " slashes at the enemy with (" + weapon.getName() + "), dealing " + weapon.dmgCalc() + " damage and applying bleed to the opponent.\n" );
     }
 
     public void defend() {

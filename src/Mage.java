@@ -7,7 +7,7 @@ public class Mage extends Character {
 
 
     public void attack() {
-        System.out.println(name + " Summons a fireball with their wand, (" + weapon.getName() + ") dealing " + weapon.getDmg() + " damage it cauterizes the wound.\n" );
+        System.out.println(name + " Summons a fireball with their wand, (" + weapon.getName() + ") dealing " + weapon.dmgCalc() + " damage it cauterizes the wound.\n" );
     }
 
     public void defend() {

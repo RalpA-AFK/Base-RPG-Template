@@ -7,9 +7,7 @@ public class Priest extends Character {
 
 
     public void attack() {
-        System.out.println(name + " prays with their rosary: (" + weapon.getName() + "" +
-                ") dealing " + weapon.dmgCalc() + " damage and healing their  teammates for " +
-                (weapon.getDmg() / 2) + " health.\n" );
+        System.out.println(name + " prays with their rosary: (" + weapon.getName() + "" + ") dealing " + weapon.dmgCalc() + " damage and healing their  teammates for " + (weapon.getDmg() / 2) + " health.\n" );
     }
 
     public void defend() {
