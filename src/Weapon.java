@@ -30,18 +30,17 @@ public class Weapon {
     public void setCritChance(int critChance){this.critChance = critChance;}
 
     public int dmgCalc(){
-
         Random dice = new Random();
         int critChance1 = getCritChance();
         int dmg1 = getDmg();
         int modifier = dice.nextInt(100);
         if(modifier < critChance1){
-            critBoolean = true;
+            setCritBoolean(true);
             BigDecimal dmg2 = BigDecimal.valueOf(dmg1);
             BigDecimal finalDmg = dmg2.multiply(BigDecimal.valueOf(1.0 + dice.nextDouble()));
             return finalDmg.intValue();
         } else {
-            critBoolean = false;
+            setCritBoolean(false);
             return dmg1;
         }
     }

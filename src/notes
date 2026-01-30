@@ -1,10 +1,31 @@
 ToDo
+Character Changes:
 
 Status effects {flame,bleed,freezing,overheating,frosted,slowed,weakened,holyDown}
-Buff effects {holyLight,holyBlessing,rally,bulk up}
 
-Level progression system unique to character type (archer has a set stat increase on level up so on so forth)
+Buff effects {holyLight, holyBlessing, rally, bulk up}
+
+Level progression system unique to character type (archer has a choice of three options for stat line set up)
 
 Enemy type declaration
 
-jframe window development
+Within each Character create the status effect that would likely collide with them (warrior - bleed, archer - bleed, priest - holyDown, mage - flame,freezing,frosted,bleed.
+_______________________
+JFrame:
+Create a base template for a 2d model traversal with randomly initiated attacks
+
+Import images for items such as weapons and consumables
+
+Implement the number system for consumable items
+
+Make a moveable sprite character that shows the movement of a whole party.
+
+_______________________
+Behaviour file:
+
+I want to use this file to implement turn based combat
+
+Before even starting this JFrame must be fleshed out to some extent as well as having the randomly initiated attacks implemented
+
+
+

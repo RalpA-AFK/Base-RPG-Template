@@ -6,7 +6,15 @@ public class Warrior extends Character {
         this.Weapon2 = Weapon2;
     }
 
+
+
     public void attack() {
+      /* Boolean critBoolean = weapon.getCritBoolean();
+
+       if(critBoolean == true){
+
+       }
+       */
         System.out.println(name + " slashes at the enemy with (" + weapon.getName() + "), dealing " + weapon.dmgCalc() + " damage and applying bleed to the opponent.\n" );
     }
 
