@@ -1,15 +1,13 @@
 ToDo
 Character Changes:
 
-Status effects {flame,bleed,freezing,overheating,frosted,slowed,weakened,holyDown}
-
-Buff effects {holyLight, holyBlessing, rally, bulk up}
+Status effects {flame,bleed,freezing,frosted,slowed,weakened,holyDown, holyUp, regen, dmgUp, blockUp, overheating}
 
 Level progression system unique to character type (archer has a choice of three options for stat line set up)
 
 Enemy type declaration
 
-Within each Character create the status effect that would likely collide with them (warrior - bleed, archer - bleed, priest - holyDown, mage - flame,freezing,frosted,bleed.
+Within each Character create the status effect that would likely collide with them (warrior - bleed | archer - bleed | priest - holyDown, holyUp | mage - flame,freezing,frosted,bleed.
 _______________________
 JFrame:
 Create a base template for a 2d model traversal with randomly initiated attacks

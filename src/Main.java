@@ -15,6 +15,17 @@ public class Main {
         Character archer = new Archer("Sheila", bow, dagger);
         Character priest = new Priest("Constantine", rosary);
 
+        Status flame = new Status("Flame",5,3);
+        Status bleed = new Status("Bleed", 2,2);
+        Status freeze = new Status("freeze",true,1);
+        Status frosted = new Status("Frosted",true,2);
+        Status weakened = new Status("weakened",true,2);
+        Status holyDown = new Status("Holy Down",true,1);
+        Status holyUp = new Status("Holy Up",true, 1);
+        Status regen = new Status("Regen",true,3);
+        Status dmgUp = new Status("DMG Up", true,2);
+        Status blockUp = new Status("Block Buffed",true,2);
+
         Character[] characters = {warrior, mage, archer, priest};
         for(Character c : characters ) {
             c.attack();
