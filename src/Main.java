@@ -38,12 +38,14 @@ public class Main {
         window1.setResizable(false);
         window1.setTitle("Lunar Scapes");
 
-        GamePanel gamePanel1 = new GamePanel();
-        window1.add(gamePanel1);
+        GamePanel gamePanel = new GamePanel();
+        window1.add(gamePanel);
         window1.pack();
 
         window1.setLocationRelativeTo(null);
         window1.setVisible(true);
+
+        gamePanel.startGameThread();
     }
 }
 
