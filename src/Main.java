@@ -32,12 +32,74 @@ public class Main {
             c.defend();
             System.out.println();
         }
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                JFrameDemo frame1 = new JFrameDemo();
-            }
-        });
 
+        JFrame window1 = new JFrame();
+        window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window1.setResizable(false);
+        window1.setTitle("Lunar Scapes");
+
+        GamePanel gamePanel1 = new GamePanel();
+        window1.add(gamePanel1);
+        window1.pack();
+
+        window1.setLocationRelativeTo(null);
+        window1.setVisible(true);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
