@@ -19,7 +19,7 @@ public class GamePanel extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
     }
     public void startGameThread(){
-        Thread gameThread  = new Thread(this);
+        Thread gameThread  = new Thread(this); // gameThread cannot be declared locally or else the thread itself will be unable to terminate
         gameThread.start();
     }
 
