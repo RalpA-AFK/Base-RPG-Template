@@ -9,7 +9,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import java.awt.Color;
 
 
 public class Player extends entity {
@@ -30,35 +29,37 @@ public class Player extends entity {
     }
     public void getPlayerImage(){
         try {
-                up1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel1,png"));
-                up2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel2,png"));
-                down1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel3,png"));
-                down2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel4,png"));
-                left1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel5,png"));
-                left2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel6,png"));
-                right1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel7,png"));
-                right2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel8,png"));
+                up1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel8.png"));
+                up2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel7.png"));
+                down1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel6.png"));
+                down2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel5.png"));
+                left1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel1.png"));
+                left2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel2.png"));
+                right1 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel3.png"));
+                right2 = ImageIO.read(getClass().getResourceAsStream("/player/Piskel4.png"));
 
         } catch (IOException e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
     }
 public void update(){
         if(keyH.upPressed == true){
             direction = "up";
             y -= speed;
+            spriteCounter++;
         }else if(keyH.downPressed == true){
             direction = "down";
             y += speed;
-        }
-        if(keyH.leftPressed == true){
+            spriteCounter++;
+        }else if(keyH.leftPressed == true){
             direction = "left";
             x -= speed  ;
+            spriteCounter++;
         }else if(keyH.rightPressed == true){
             direction = "right";
             x += speed;
+            spriteCounter++;
         }
-        spriteCounter++;
         if(spriteCounter > 10){
             if(spriteNum == 1){
                 spriteNum = 2;
