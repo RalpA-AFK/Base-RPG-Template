@@ -1,3 +1,4 @@
+package main;
 import javax.swing.SwingUtilities;
 import javax.swing.JFrame;
 public class Main {
@@ -27,11 +28,6 @@ public class Main {
         Status blockUp = new Status("Block Buffed",true,2);
 
         Character[] characters = {warrior, mage, archer, priest};
-        for(Character c : characters ) {
-            c.attack();
-            c.defend();
-            System.out.println();
-        }
 
         JFrame window1 = new JFrame();
         window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

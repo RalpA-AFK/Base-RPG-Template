@@ -1,3 +1,4 @@
+package main;
 public class Status {
 
     private String statusName;

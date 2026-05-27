@@ -1,3 +1,4 @@
+package main;
 public class Warrior extends Character {
     private Weapon Weapon2;
     public Warrior(String name, Weapon weapon, Weapon Weapon2) {
