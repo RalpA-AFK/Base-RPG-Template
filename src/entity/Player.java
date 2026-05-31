@@ -6,6 +6,8 @@ import main.KeyHandler;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 
 import javax.imageio.ImageIO;
 
@@ -43,19 +45,19 @@ public class Player extends entity {
                 idleDown5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle05.png"));
                 idleDown6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle06.png"));
 
-                idleLeft1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle01.png"));
-                idleLeft2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle02.png"));
-                idleLeft3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle03.png"));
-                idleLeft4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle04.png"));
-                idleLeft5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle05.png"));
-                idleLeft6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle06.png"));
-
                 idleRight1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle01.png"));
                 idleRight2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle02.png"));
                 idleRight3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle03.png"));
                 idleRight4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle04.png"));
                 idleRight5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle05.png"));
                 idleRight6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle06.png"));
+
+                idleLeft1 = flipHorizontally(idleRight1);
+                idleLeft2 = flipHorizontally(idleRight2);
+                idleLeft3 = flipHorizontally(idleRight3);
+                idleLeft4 = flipHorizontally(idleRight4);
+                idleLeft5 = flipHorizontally(idleRight5);
+                idleLeft6 = flipHorizontally(idleRight6);
 
                 runningUp1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning01.png"));
                 runningUp2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning02.png"));
@@ -71,19 +73,19 @@ public class Player extends entity {
                 runningDown5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning05.png"));
                 runningDown6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning06.png"));
 
-                runningLeft1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning01.png"));
-                runningLeft2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning02.png"));
-                runningLeft3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning03.png"));
-                runningLeft4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning04.png"));
-                runningLeft5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning05.png"));
-                runningLeft6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning06.png"));
-
                 runningRight1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning01.png"));
                 runningRight2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning02.png"));
                 runningRight3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning03.png"));
                 runningRight4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning04.png"));
                 runningRight5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning05.png"));
                 runningRight6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning06.png"));
+
+                runningLeft1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning01.png"));
+                runningLeft2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning02.png"));
+                runningLeft3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning03.png"));
+                runningLeft4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning04.png"));
+                runningLeft5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning05.png"));
+                runningLeft6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning06.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -111,6 +113,14 @@ public void update(){
             if(spriteNum == 1){
                 spriteNum = 2;
             } else if(spriteNum == 2){
+                spriteNum = 3;
+            }else if(spriteNum == 3){
+                spriteNum = 4;
+            }else if(spriteNum == 4){
+                spriteNum = 5;
+            }else if(spriteNum == 5){
+                spriteNum = 6;
+            }else if(spriteNum == 6){
                 spriteNum = 1;
             }
             spriteCounter = 0;
