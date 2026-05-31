@@ -1,5 +1,14 @@
 package main;
 import javax.swing.SwingUtilities;
+
+import Class.Archer;
+import Class.Character;
+import Class.Mage;
+import Class.Priest;
+import Class.Warrior;
+import Class.Weapon;
+import Damage.Status;
+
 import javax.swing.JFrame;
 public class Main {
 

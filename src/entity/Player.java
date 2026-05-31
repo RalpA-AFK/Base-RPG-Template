@@ -29,14 +29,61 @@ public class Player extends entity {
     }
     public void getPlayerImage(){
         try {
-                up1 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel8.png"));
-                up2 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel7.png"));
-                down1 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel6.png"));
-                down2 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel5.png"));
-                left1 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel1.png"));
-                left2 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel2.png"));
-                right1 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel3.png"));
-                right2 = ImageIO.read(getClass().getResourceAsStream("/player/piskel_original/Piskel4.png"));
+                idleUp1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle01.png"));
+                idleUp2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle02.png"));
+                idleUp3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle03.png"));
+                idleUp4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle04.png"));
+                idleUp5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle05.png"));
+                idleUp6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightUpIdle/KnightUpIdle06.png"));
+
+                idleDown1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle01.png"));
+                idleDown2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle02.png"));
+                idleDown3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle03.png"));
+                idleDown4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle04.png"));
+                idleDown5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle05.png"));
+                idleDown6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightDownIdle/KnightDownIdle06.png"));
+
+                idleLeft1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle01.png"));
+                idleLeft2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle02.png"));
+                idleLeft3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle03.png"));
+                idleLeft4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle04.png"));
+                idleLeft5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle05.png"));
+                idleLeft6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightLeftIdle/KnightLeftIdle06.png"));
+
+                idleRight1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle01.png"));
+                idleRight2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle02.png"));
+                idleRight3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle03.png"));
+                idleRight4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle04.png"));
+                idleRight5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle05.png"));
+                idleRight6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightIdle/KnightRightIdle/KnightRightIdle06.png"));
+
+                runningUp1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning01.png"));
+                runningUp2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning02.png"));
+                runningUp3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning03.png"));
+                runningUp4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning04.png"));
+                runningUp5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning05.png"));
+                runningUp6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightUpRunning/KnightUpRunning06.png"));
+
+                runningDown1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning01.png"));
+                runningDown2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning02.png"));
+                runningDown3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning03.png"));
+                runningDown4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning04.png"));
+                runningDown5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning05.png"));
+                runningDown6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightDownRunning/KnightDownRunning06.png"));
+
+                runningLeft1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning01.png"));
+                runningLeft2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning02.png"));
+                runningLeft3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning03.png"));
+                runningLeft4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning04.png"));
+                runningLeft5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning05.png"));
+                runningLeft6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightLeftRunning/KnightLeftRunning06.png"));
+
+                runningRight1 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning01.png"));
+                runningRight2 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning02.png"));
+                runningRight3 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning03.png"));
+                runningRight4 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning04.png"));
+                runningRight5 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning05.png"));
+                runningRight6 = ImageIO.read(getClass().getResourceAsStream("/player/knight/KnightRunning/KnightRightRunning/KnightRightRunning06.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -73,38 +120,67 @@ public void draw(Graphics2D g2){
         BufferedImage image = null;
         switch(direction){
             case "up":
-                if (spriteNum == 1){
-                    image = up1;
-                }
-                if (spriteNum == 2){
-                    image = up2;
-                }
-                
+                if (spriteNum == 1){image = runningUp1;}
+                if (spriteNum == 2){image = runningUp2;}
+                if (spriteNum == 3){image = runningUp3;}
+                if (spriteNum == 4){image = runningUp4;}
+                if (spriteNum == 5){image = runningUp5;}
+                if(spriteNum == 6){image = runningUp6;}
                 break;
             case "down":
-                if (spriteNum == 1){
-                    image = down1;
-                }
-                if(spriteNum == 2){
-                    image = down2;
-                }
+                if (spriteNum == 1){image = runningDown1;}
+                if(spriteNum == 2){image = runningDown2;}
+                if(spriteNum == 3){image = runningDown3;}
+                if(spriteNum == 4) {image = runningDown4;}
+                if(spriteNum == 5) {image = runningDown5;}
+                if(spriteNum ==6){image = runningDown6;}
                 break;
             case "left":
-                if (spriteNum == 1){
-                    image = left1;
-                }
-                if (spriteNum == 2){
-                    image = left2;
-                }
+                if (spriteNum == 1){image = runningLeft1;}
+                if (spriteNum == 2){image = runningLeft2;}
+                if(spriteNum == 3){image = runningLeft3;}
+                if(spriteNum == 4) {image = runningLeft4;}
+                if(spriteNum == 5){image = runningLeft5;}
+                if(spriteNum == 6){image = runningLeft6;}
                 break;
             case "right":
-                if(spriteNum == 1){
-                    image = right1;
-                }
-                if (spriteNum == 2){
-                    image = right2;
-                }
+                if(spriteNum == 1){image = runningRight1;}
+                if (spriteNum == 2){image = runningRight2;}
+                if(spriteNum == 3) {image = runningRight3;}
+                if(spriteNum == 4) {image = runningRight4;}
+                if(spriteNum == 5) {image = runningRight5;}
+                if(spriteNum == 6) {image = runningRight6;}
                 break;
+            default:
+                if(direction == "up"){
+                    if (spriteNum == 1){image = idleUp1;}
+                    if (spriteNum == 2){image = idleUp2;}
+                    if (spriteNum == 3){image = idleUp3;}
+                    if (spriteNum == 4){image = idleUp4;}
+                    if (spriteNum == 5){image = idleUp5;}
+                    if(spriteNum == 6){image = idleUp6;}
+                } else if(direction == "down"){
+                    if (spriteNum == 1){image = idleDown1;}
+                    if(spriteNum == 2){image = idleDown2;}
+                    if(spriteNum == 3){image = idleDown3;}
+                    if(spriteNum == 4) {image = idleDown4;}
+                    if(spriteNum == 5) {image = idleDown5;}
+                    if(spriteNum == 6) {image = idleDown6;}
+                } else if(direction == "left"){
+                    if (spriteNum == 1){image = idleLeft1;}
+                    if (spriteNum == 2){image = idleLeft2;}
+                    if (spriteNum == 3){image = idleLeft3;}
+                    if(spriteNum == 4) {image = idleLeft4;}
+                    if(spriteNum == 5) {image = idleLeft5;}
+                    if(spriteNum == 6) {image = idleLeft6;} 
+                } else if(direction == "right"){
+                    if(spriteNum == 1){image = idleRight1;}
+                    if (spriteNum == 2){image = idleRight2;}
+                    if(spriteNum == 3) {image = idleRight3;}
+                    if(spriteNum == 4) {image = idleRight4;}
+                    if(spriteNum == 5) {image = idleRight5;}
+                    if(spriteNum == 6) {image = idleRight6;}
+                }
         }
         g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
 }
