@@ -1,4 +1,4 @@
-package Damage;
+package damage;
 import java.util.Random;
 public class Behaviour {
 

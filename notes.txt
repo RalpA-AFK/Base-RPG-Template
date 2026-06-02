@@ -16,7 +16,7 @@ Import images for items such as weapons and consumables
 
 Focus on tile implementation to make the 2d field 
 
-learn how to properly splice tile assets
+learn how to properly slice tile assets
 
 Implement the number system for consumable items
 

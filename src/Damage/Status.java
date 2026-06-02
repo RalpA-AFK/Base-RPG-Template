@@ -1,4 +1,4 @@
-package Damage;
+package damage;
 public class Status {
 
     private String statusName;

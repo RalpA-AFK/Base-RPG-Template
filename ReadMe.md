@@ -9,12 +9,13 @@ Building the game in Java allows for a lot of flexibility and customization, but
 ## Build & Run
 Requires a JDK( Java 8 or newer)
 
-From the project root: 
+<pre>
 # compile all sources into bin/
-<pre>javac -d bin/ src/**/*.java </pre>
+javac -d bin/ src/**/*.java
 
 # run the game
 java -cp "bin;res" main.Main
+</pre>
 
 The classpath includes 'res' so that the sprite sheets load at runtime
 

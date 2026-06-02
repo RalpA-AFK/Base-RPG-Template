@@ -1,12 +1,12 @@
 package main;
 import javax.swing.SwingUtilities;
 
-import class.Archer;
-import class.Character;
-import class.Mage;
-import class.Priest;
-import class.Warrior;
-import class.Weapon;
+import Class.Archer;
+import Class.Character;
+import Class.Mage;
+import Class.Priest;
+import Class.Warrior;
+import Class.Weapon;
 import damage.Status;
 
 import javax.swing.JFrame;

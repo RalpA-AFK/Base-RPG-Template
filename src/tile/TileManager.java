@@ -12,7 +12,7 @@ import java.awt.image.AffineTransformOp;
 
 import main.GamePanel;
 
-public class TileManager {
+public class TileManager{
     GamePanel gp;
     Tile[] tile;
     public static final int FRAME_COL = 16;
@@ -20,37 +20,25 @@ public class TileManager {
     
     public static final int FRAME_SIZE  = 16;
 
+    public String[] season = {"spring", "summer", "fall", "winter"};
+    public String currentSeason = season[0];
+    public String path;
+
     public TileManager(GamePanel gp){
         this.gp = gp;
         tile = new Tile[FRAME_COL * FRAME_ROW];
         getTileImage();
     }
     public void getTileImage(){
-        switch(gp.currentSeason){
-            case "spring": 
-                sliceSheet("tiles/Grass_Tiles_1.png");
-                for(int i = 0; i < tile.length; i++){
-                   tile[i] = new Tile(loadImage(images[i]));
-                }
-                break;
-            case "summer":
-                sliceSheet("tiles/Grass_Tiles_2.png");
-                for(int i = 0; i < tile.length; i++){
-                    tile[i] = new Tile(loadImage(images[i]));
-                }
-                break;
-            case "fall":
-                sliceSheet("tiles/Grass_Tiles_3.png");
-                for(int i = 0; i < tile.length; i++){
-                    tile[i] = new Tile(loadImage(images[i]));
-                }
-                break;
-            case "winter":
-                sliceSheet("tiles/Grass_Tiles_4.png");
-                for(int i = 0; i < tile.length; i++){
-                    tile[i] = new Tile(loadImage(images[i]));
-                }
-                break;
+        switch(currentSeason){
+            case "spring": path = "/tiles/Grass_Tiles_1.png"; break;
+            case "summer": path = "/tiles/Grass_Tiles_2.png"; break;
+            case "fall": path = "/tiles/Grass_Tiles_3.png"; break;
+            case "winter": path = "/tiles/Grass_Tiles_4.png"; break;
+        }
+        BufferedImage[] images = sliceSheet(path);
+        for(int i = 0; i < tile.length; i++){
+            tile[i] = new Tile(images[i]);
         }
     
         }
@@ -88,7 +76,7 @@ public class TileManager {
         int y = 0;
 
         while(col < gp.maxScreenCo1 && row < gp.maxScreenRow){
-            g2.drawImage(tile[1].image, x, y, gp.tileSize, gp.tileSize, null);
+            g2.drawImage(tile[0].image, x, y, gp.tileSize, gp.tileSize, null);
             col++;
             x += gp.tileSize;
 
